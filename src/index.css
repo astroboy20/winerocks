@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 8%;
+    --foreground: 40 10% 92%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 40 10% 92%;
+
+    --popover: 230 20% 12%;
+    --popover-foreground: 40 10% 92%;
+
+    --primary: 238 48% 32%;
+    --primary-foreground: 40 10% 92%;
+
+    --secondary: 230 15% 18%;
+    --secondary-foreground: 40 10% 92%;
+
+    --muted: 230 15% 16%;
+    --muted-foreground: 230 10% 50%;
+
+    --accent: 40 100% 63%;
+    --accent-foreground: 230 25% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 15% 20%;
+    --input: 230 15% 20%;
+    --ring: 40 100% 63%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 230 20% 10%;
+    --sidebar-foreground: 40 10% 92%;
+    --sidebar-primary: 238 48% 32%;
+    --sidebar-primary-foreground: 40 10% 92%;
+    --sidebar-accent: 230 15% 16%;
+    --sidebar-accent-foreground: 40 10% 92%;
+    --sidebar-border: 230 15% 20%;
+    --sidebar-ring: 40 100% 63%;
+
+    --gold: 40 100% 63%;
+    --gold-foreground: 230 25% 8%;
+    --indigo: 238 48% 32%;
+    --indigo-light: 238 40% 45%;
+    --cyan: 185 80% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .font-serif-display {
+    font-family: 'Instrument Serif', serif;
+  }
+
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--gold)), hsl(40 80% 75%));
+  }
+
+  .text-gradient-indigo {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--indigo-light)), hsl(var(--cyan)));
+  }
+
+  .glow-gold {
+    box-shadow: 0 0 30px -5px hsl(var(--gold) / 0.3);
+  }
+
+  .glow-gold-sm {
+    box-shadow: 0 0 15px -3px hsl(var(--gold) / 0.2);
+  }
+
+  .card-hover {
+    @apply transition-all duration-500 ease-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 20px 40px -15px hsl(var(--gold) / 0.15);
+  }
+
+  .magnetic-btn {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .magnetic-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px -5px hsl(var(--gold) / 0.4);
+  }
+
+  .magnetic-btn:active {
+    transform: scale(0.98);
+  }
+}
