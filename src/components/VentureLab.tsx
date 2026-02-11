@@ -8,45 +8,59 @@ const PROJECTS = [
     tag: "Event Tech",
     principle: "Scarcity & Social Proof",
     color: "from-gold/20 to-gold/5",
-    challenge: "Event discovery is fragmented and passive. Users default to familiar events, missing high-value experiences—a classic status quo bias compounded by choice overload across dozens of platforms.",
-    nudge: "Built the 'YouTube & Google for events'—a single discovery layer that leverages social proof ('238 people near you are interested') and scarcity signals ('87% sold') to transform passive browsing into decisive action. Algorithmic curation reduces choice overload while surfacing personally relevant events.",
-    outcome: "Users discover 4× more events and convert from browsing to booking at significantly higher rates. The platform turns FOMO from anxiety into a precision engagement tool.",
-    link: "",
+    challenge:
+      "Event discovery is fragmented and passive. Users default to familiar events, missing high-value experiences—a classic status quo bias compounded by choice overload across dozens of platforms.",
+    nudge:
+      "Built the 'YouTube & Google for events'—a single discovery layer that leverages social proof ('238 people near you are interested') and scarcity signals ('87% sold') to transform passive browsing into decisive action. Algorithmic curation reduces choice overload while surfacing personally relevant events.",
+    outcome:
+      "Users discover 4× more events and convert from browsing to booking at significantly higher rates. The platform turns FOMO from anxiety into a precision engagement tool.",
+    link: " https://nextvibe.co",
   },
   {
     name: "MintFactory",
     tag: "Startup Infrastructure",
     principle: "Commitment Escalation",
     color: "from-cyan/20 to-cyan/5",
-    challenge: "Most startups die not from bad ideas, but from slow validation. Founders suffer from sunk cost fallacy—over-investing in unvalidated products—while potential early adopters face bystander effect, waiting for others to signal value first.",
-    nudge: "Fused the mechanics of Product Hunt (social validation), vibe-coding (rapid prototyping), and Kickstarter (commitment devices) into a single platform. Founders get real-time market signals; backers use micro-commitments that escalate naturally from interest to investment, reducing the gap between 'I like this' and 'I'm in.'",
-    outcome: "Dramatically accelerates product-market fit globally by compressing the feedback loop from months to days. Startups iterate faster, fail cheaper, and find their audience through behavioral signals rather than guesswork.",
-    link: "",
+    challenge:
+      "Most startups die not from bad ideas, but from slow validation. Founders suffer from sunk cost fallacy—over-investing in unvalidated products—while potential early adopters face bystander effect, waiting for others to signal value first.",
+    nudge:
+      "Fused the mechanics of Product Hunt (social validation), vibe-coding (rapid prototyping), and Kickstarter (commitment devices) into a single platform. Founders get real-time market signals; backers use micro-commitments that escalate naturally from interest to investment, reducing the gap between 'I like this' and 'I'm in.'",
+    outcome:
+      "Dramatically accelerates product-market fit globally by compressing the feedback loop from months to days. Startups iterate faster, fail cheaper, and find their audience through behavioral signals rather than guesswork.",
+    link: "https://themintfactory.xyz",
   },
   {
     name: "Prisms Healthcare",
     tag: "HealthTech",
     principle: "Choice Architecture",
     color: "from-indigo-light/20 to-indigo-light/5",
-    challenge: "Electronic medical records are notoriously hostile to clinician workflows—poor defaults, cognitive overload, and friction-heavy interfaces lead to documentation fatigue, errors, and burnout. Clinicians default to workarounds that compromise patient data integrity.",
-    nudge: "Consulted on building a robust EMR system grounded in choice architecture. Intelligent defaults pre-populate based on context, reducing unnecessary decisions. Information is layered progressively—surfacing what matters now and hiding what doesn't. Friction is strategically placed before irreversible actions, while routine tasks flow effortlessly.",
-    outcome: "Clinicians spend less time fighting the system and more time with patients. Documentation accuracy improves, error rates drop, and the EMR becomes a behavioral ally rather than an obstacle to care.",
-    link: "",
+    challenge:
+      "Electronic medical records are notoriously hostile to clinician workflows—poor defaults, cognitive overload, and friction-heavy interfaces lead to documentation fatigue, errors, and burnout. Clinicians default to workarounds that compromise patient data integrity.",
+    nudge:
+      "Consulted on building a robust EMR system grounded in choice architecture. Intelligent defaults pre-populate based on context, reducing unnecessary decisions. Information is layered progressively—surfacing what matters now and hiding what doesn't. Friction is strategically placed before irreversible actions, while routine tasks flow effortlessly.",
+    outcome:
+      "Clinicians spend less time fighting the system and more time with patients. Documentation accuracy improves, error rates drop, and the EMR becomes a behavioral ally rather than an obstacle to care.",
+    link: "https://prismsHealthcare.com",
   },
   {
     name: "DailyManna",
     tag: "FaithTech",
     principle: "Identity & Community",
     color: "from-gold/20 to-indigo-light/5",
-    challenge: "Devotional apps are often solitary experiences, disconnecting believers from communal faith practice. Without social accountability, engagement drops rapidly—a classic present bias where daily spiritual discipline loses to immediate distractions. Users lack identity reinforcement tied to their faith.",
-    nudge: "Built for Deeper Life Christian Ministry, DailyManna anchors every interaction in the believer's identity in Christ. Community features create social commitment devices—daily devotionals are shared milestones, not isolated tasks. Streaks and group reflections leverage commitment escalation, while identity-based framing ('As a child of God, you've reflected 30 days straight') deepens intrinsic motivation beyond mere habit tracking.",
-    outcome: "Believers engage consistently with scripture through identity-reinforced community. Daily devotional completion rates remain high as faith practice transforms from individual discipline into collective spiritual momentum.",
-    link: "",
+    challenge:
+      "Devotional apps are often solitary experiences, disconnecting believers from communal faith practice. Without social accountability, engagement drops rapidly—a classic present bias where daily spiritual discipline loses to immediate distractions. Users lack identity reinforcement tied to their faith.",
+    nudge:
+      "Built for Deeper Life Christian Ministry, DailyManna anchors every interaction in the believer's identity in Christ. Community features create social commitment devices—daily devotionals are shared milestones, not isolated tasks. Streaks and group reflections leverage commitment escalation, while identity-based framing ('As a child of God, you've reflected 30 days straight') deepens intrinsic motivation beyond mere habit tracking.",
+    outcome:
+      "Believers engage consistently with scripture through identity-reinforced community. Daily devotional completion rates remain high as faith practice transforms from individual discipline into collective spiritual momentum.",
+    link: "https://dailymanna.app",
   },
 ];
 
 const VentureLab = () => {
-  const [activeProject, setActiveProject] = useState<typeof PROJECTS[0] | null>(null);
+  const [activeProject, setActiveProject] = useState<
+    (typeof PROJECTS)[0] | null
+  >(null);
 
   return (
     <section className="py-32 px-6 relative">
@@ -63,10 +77,13 @@ const VentureLab = () => {
           </p>
           <h2 className="text-4xl md:text-5xl font-bold font-display mb-4">
             Portfolios Powered by{" "}
-            <span className="font-serif-display italic text-gradient-gold">BE.AI</span>
+            <span className="font-serif-display italic text-gradient-gold">
+              BE.AI
+            </span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Every venture is an experiment in human behavior. Here's what we've proven.
+            Every venture is an experiment in human behavior. Here's what we've
+            proven.
           </p>
         </motion.div>
 
@@ -81,7 +98,9 @@ const VentureLab = () => {
               onClick={() => setActiveProject(project)}
               className="card-hover group cursor-pointer rounded-2xl border border-border bg-card/50 backdrop-blur-sm p-8 relative overflow-hidden"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+              />
               <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-xs tracking-widest uppercase text-muted-foreground">
